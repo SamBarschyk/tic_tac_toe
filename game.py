@@ -60,3 +60,13 @@ class Game:
     def check_winning_conditions(self) -> Optional[str]:
         pass
 
+
+if __name__ == '__main__':
+    game = Game()
+    game.start_game()
+    if game.who_win is None:
+        print('Нічия')
+    elif game.who_win == X_CELL:
+        print(f"виграв {X_CELL}")
+    elif game.who_win == O_CELL:
+        print(f"виграв {O_CELL}")
